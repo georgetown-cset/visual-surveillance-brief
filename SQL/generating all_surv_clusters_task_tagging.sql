@@ -11,7 +11,7 @@ CASE WHEN emotion_expression >0 THEN 1 ELSE 0 END as n_emotionrec,
 CASE WHEN crowd_surveillance >0 THEN 1 ELSE 0 END as n_crowd,
 CASE WHEN action_recognition >0 THEN 1 ELSE 0 END as n_action
 
-FROM `gcp-cset-projects.aa2291_sandbox.surveillance_task_articles_1109_maxdict` 
+FROM `gcp-cset-projects.surveillance_tasks_brief.surveillance_task_articles_1109_maxdict` 
 -- table that I generated: list of papers + count of which tasks they were tagged with
 WHERE total_matches >0
 ),
