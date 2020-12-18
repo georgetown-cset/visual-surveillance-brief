@@ -11,7 +11,7 @@ This is a repo for the visual surveillance data brief written by Max L, Ashwin A
         * face recognition, emotion recognition, gait analysis, crowd counting, action recognition, face anti-spoofing, and person recognition
         * we have a dictionary where each of these task areas is associated with a list of regular expressions
         * for each paper in our pipeline, we count how many of its tasks match face recognition terms, how many match emotion recognition terms, etc.
-* we save the results in a csv, which I've uploaded to BigQuery as aa2291_sandbox.surveillance_task_articles_1109_maxdict 
+* we save the results in a csv, which I've uploaded to BigQuery as surveillance_tasks_brief.surveillance_task_articles_1109_maxdict 
 
 ## Finding papers in surveillance-heavy clusters (BigQuery)
 
