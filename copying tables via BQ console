@@ -1,0 +1,16 @@
+bq --project_id=gcp-cset-projects cp -n 
+article_classification.predictions surveillance_tasks_brief.predictions 
+
+bq --project_id=gcp-cset-projects cp -n 
+gcp_cset_links_v2.paper_affiliations_merged surveillance_tasks_brief.paper_affiliations_merged
+
+bq --project_id=gcp-cset-projects cp -n 
+gcp_cset_links_v2.article_merged_meta surveillance_tasks_brief.article_merged_meta
+
+bq --project_id=gcp-cset-projects cp -n 
+tasks_and_methods.tasks surveillance_tasks_brief.tasks
+
+bq --project_id=gcp-cset-projects cp -n 
+tasks_and_methods.task_clusters surveillance_tasks_brief.task_clusters
+
+
