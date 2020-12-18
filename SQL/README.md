@@ -22,7 +22,8 @@ Filtering for cv_surv_frac_15_19 >= .5 and n_cv_task_15_19 >= 30 gives the top 5
 ## surveillance - generating surveillance_cluster_papers_201119
 Get relevant stats for papers in these 51 clusters. 
 * Count the number of countries and organizations associated with each paper. Get basic stats (year, title) from corpus_merged.
-* result is stored in aa2291_sandbox.surveillance_cluster_papers_201119
+* result is stored in surveillance_tasks_brief.surveillance_cluster_papers_1119
+    * formerly aa2291_sandbox.surveillance_cluster_papers_201119
 
 64,595 papers; 27,550 papers with a year between 2015 and 2019 (inclusive); 22,704 of those papers have at least one associated country
 
