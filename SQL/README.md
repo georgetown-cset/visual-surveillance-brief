@@ -7,12 +7,15 @@
     * n_cv_surv_15_19 (number of pipeline papers tagged as surveillance)
     * cv_surv_frac_15_19 (= proportion of pipeline papers tagged as surveillance) 
     * p_{task} (proportion of surveillance-tagged pipeline papers tagged w each task), 
-* Result is stored in aa2291_sandbox.all_surv_clusters_task_tagging
-* New version: aa2291_sandbox.all_surv_clusters_task_tagging_1217
+* Result is stored in surveillance_tasks_brief.all_surv_clusters_task_tagging_1217
+    * previous version: aa2291_sandbox.all_surv_clusters_task_tagging_1217
+    * initial version: aa2291_sandbox.all_surv_clusters_task_tagging
 
-## generating surv_clusters_task_201119
+## generating surv_clusters_top_1119
 Filtering for cv_surv_frac_15_19 >= .5 and n_cv_task_15_19 >= 30 gives the top 51 clusters. The rest of our analysis is based on papers from these clusters published in the years 2015-2019. 
-* 51 clusters, with surveillance stats: aa2291_sandbox.surv_clusters_task_201119
+* 51 clusters, with surveillance stats: surveillance_tasks_brief.surv_clusters_top_1119
+    * formerly aa2291_sandbox.surv_clusters_task_201119
+
 
 # Getting the papers in those clusters
 
