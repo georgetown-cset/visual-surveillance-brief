@@ -4,7 +4,7 @@ WITH
 article_distinct_countries AS(
 SELECT article_id, country 
 --select articles from the previously generated dataset of papers
-FROM `aa2291_sandbox.surveillance_cluster_papers_201119` papers
+FROM `surveillance_tasks_brief.surveillance_cluster_papers_1119` papers
 LEFT JOIN `gcp_cset_links_v2.paper_affiliations_merged` paper_aff ON(paper_aff.merged_id = papers.article_id)
 
 WHERE country is not null
@@ -29,7 +29,7 @@ SUM(cv_surv_fraction_15_19*(1./n_countries) * p_action) exp_action,
 
 FROM
 article_distinct_countries
-INNER JOIN `aa2291_sandbox.surveillance_cluster_papers_201119` papers USING(article_id)
+INNER JOIN `surveillance_tasks_brief.surveillance_cluster_papers_1119` papers USING(article_id)
 
 WHERE year in (2015,2016,2017,2018,2019)
 
