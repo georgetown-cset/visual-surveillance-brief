@@ -30,10 +30,18 @@ Get relevant stats for papers in these 51 clusters.
 # Generating country-level stats
 
 ## surveillance - generating country_stats
-* generate the list of affiliated countries for each article in aa2291_sandbox.surveillance_cluster_papers_201119 published between 2015 and 2019
+* generate the list of affiliated countries for each article in surveillance_tasks_brief.surveillance_cluster_papers_1119 published between 2015 and 2019
 * for each article-country pair generated, count 1/N_a towards exp_surv for the country, where N_a is the number of countries associated with the article
     * Multiply by the article’s p_{task} stat to get its contribution to the task-specific output of that country
 * aggregate by country and year, looking only at years between 2015 and 2019.
 * tag countries’ membership in disjoint country_groups. This includes EU 27, CANZUK, and also EFTA, ASEAN (Southeast Asia), and a list of Middle Eastern countries.
 * result is stored in surveillance_tasks_brief.surveillance_country_stats_15_19
     * formerly: aa2291_sandbox.surveillance_country_stats_15_19
+    
+# Generating computer vision stats
+
+## CV papers - generating country_stats
+* List all papers from 2015-19 tagged as computer vision by James's classifier (306k)
+* For all papers associated with at least one country (262k), calculate country-based yearly publication stats
+* We then save the results to a Google Sheet and compare to surveillance stats
+    * Sheet: https://docs.google.com/spreadsheets/d/1owkiWTt5N5SNMBw4PnaocaWAlGWBwzfxdP1oPgvgpBc/edit#gid=1011004304
