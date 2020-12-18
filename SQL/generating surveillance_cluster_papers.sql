@@ -2,7 +2,7 @@
 WITH surveillance_cluster_articles as (
 SELECT * from 
 science_map.dc5_cluster_assignment_stable
-INNER JOIN `aa2291_sandbox.surv_clusters_task_201119` USING(cluster_id)
+INNER JOIN `surveillance_tasks_brief.surv_clusters_top_1119` USING(cluster_id)
 ORDER BY cv_surv_fraction_15_19 DESC, cluster_id ),
 
 --count number of organizations and countries affiliated with the paper, based on paper_affiliations_merged
