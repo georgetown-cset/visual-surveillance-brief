@@ -33,7 +33,7 @@ This is a repo for the visual surveillance data brief written by Max L, Ashwin A
 ## Calculating total computer vision numbers, and comparing with surveillance
 * We use the same country-affiliation methods to calculate the number of computer vision papers per country by year 
     * Counting papers tagged as CV by James' ArXiv-trained classifier
-* We save the CV country-year stats, and a copy of the surveillance country-year stats, in a Google Sheet: 
+* We save the CV country-year stats, and a copy of the surveillance country-year stats, in a Google Sheet: https://docs.google.com/spreadsheets/d/1owkiWTt5N5SNMBw4PnaocaWAlGWBwzfxdP1oPgvgpBc/edit#gid=1011004304
 * We make pivot tables to get CV publication stats by country and year
     * We compare them to the surveillance stats to get countries' %surveillance over time
 
