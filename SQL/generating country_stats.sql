@@ -32,7 +32,8 @@ article_distinct_countries
 INNER JOIN `surveillance_tasks_brief.surveillance_cluster_papers_1119` papers USING(article_id)
 
 WHERE year in (2015,2016,2017,2018,2019)
-
+AND n_countries >0
+                       
 GROUP BY country, year
 ORDER BY exp_surv DESC
 ),
