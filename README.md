@@ -7,6 +7,7 @@ This is a repo for the visual surveillance data brief written by Max L, Ashwin A
 * We use the tasks and methods tagging system described in https://github.com/georgetown-cset/task-and-method-annotation
     * extract a list of tasks for MAG computer vision articles. (Max to upload and describe)
         * (the MAG papers are identified as computer vision based on James's tagger) 
+* Before deciding to focus on surveillance, we looked for the most popular tasks, and the tasks which the US focused on more than China (and vice-versa). (finding top tasks.ipynb)
 * We then process the results, tagging papers based on the surveillance tasks they work on. (tagging papers as surveillance.ipynb)
     * use regular expression matching to count how many of a paper's tasks match a list of seven "visual surveillance" tasks
         * face recognition, emotion recognition, gait analysis, crowd counting, action recognition, face anti-spoofing, and person recognition
