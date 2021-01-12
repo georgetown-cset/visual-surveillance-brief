@@ -2,13 +2,12 @@ WITH
 
 --Find all (article, country) pairs for articles in our 51 clusters of interest
 article_distinct_countries AS(
-SELECT article_id, country 
+SELECT DISTINCT article_id, country 
 --select articles from the previously generated dataset of papers
 FROM `surveillance_tasks_brief.surveillance_cluster_papers_1119` papers
 LEFT JOIN `gcp_cset_links_v2.paper_affiliations_merged` paper_aff ON(paper_aff.merged_id = papers.article_id)
 
 WHERE country is not null
-GROUP BY article_id, country
 
 ),
 

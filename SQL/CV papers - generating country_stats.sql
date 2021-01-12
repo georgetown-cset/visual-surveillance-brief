@@ -22,12 +22,11 @@ GROUP BY cset_id
 
 -- list article-country pairs
 article_distinct_countries AS(
-SELECT cset_id, country 
+SELECT DISTINCT cset_id, country 
 FROM cv_papers
 LEFT JOIN `gcp_cset_links_v2.paper_affiliations_merged` paper_affiliations ON(paper_affiliations.merged_id = cv_papers.cset_id)
 
 WHERE country is not null
-GROUP BY cset_id, country
 
 ),
 

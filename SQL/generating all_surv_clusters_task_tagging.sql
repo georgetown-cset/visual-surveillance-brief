@@ -56,10 +56,9 @@ GROUP BY cluster_id),
 --count of surveillance task-tagged papers by cluster
 --formerly called "mag_surveillance_count"
 tagged_surveillance_count_15_19 AS(
-SELECT COUNT(DISTINCT article_id) as n_tagged_surv_15_19, cluster_id from `gcp-cset-projects.surveillance_tasks_brief.
-  
-  
-  _articles_1109_maxdict` 
+SELECT COUNT(DISTINCT article_id) as n_tagged_surv_15_19, cluster_id 
+FROM surveillance_tasks_brief.surveillance_task_articles_1109_maxdict
+ 
 INNER JOIN science_map.dc5_cluster_assignment_stable assign USING(article_id)
 WHERE year > 2014 and year < 2020
 AND total_matches > 0
