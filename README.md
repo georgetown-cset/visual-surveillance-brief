@@ -14,7 +14,7 @@ This is a repo for the visual surveillance data brief written by Max L, Ashwin A
         * we have a dictionary where each of these task areas is associated with a list of regular expressions
         * for each paper in our pipeline, we count how many of its tasks match face recognition terms, how many match emotion recognition terms, etc.
     * we also check that our dictionaries aren't missing associated tasks, by checking for tasks that often occur in the same paper as our regex terms
-* We save the resulting list of surveillance-task-flagged papers in a csv, which I've uploaded to BigQuery as surveillance_tasks_brief.surveillance_task_articles_1109_maxdict 
+* We save the resulting list of surveillance-task-flagged papers in a csv, which I've uploaded to BigQuery as [surveillance_tasks_brief.surveillance_task_articles_1109_maxdict](https://console.cloud.google.com/bigquery?project=gcp-cset-projects&p=gcp-cset-projects&d=surveillance_tasks_brief&t=surveillance_task_articles_1109_maxdict&page=table)
 
 ## Finding papers in surveillance-heavy clusters (BigQuery)
 
