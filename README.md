@@ -13,34 +13,33 @@ This is a repo for the visual surveillance data brief written by Max L, Ashwin A
 ## Analytic decision-making: Finding tasks of interest within computer vision (Python)
 We found that computer vision research was distributed over a wide range of tasks. Table X reports the top 10 most popular computer vision tasks worldwide from 2015-19, and the proportion of computer vision papers tagged with each task.
 
-[Table X: Face recognition and action recognition are among the most popular computer vision tasks]
+<details> <summary> Table X: Face recognition and action recognition are among the most popular computer vision tasks </summary>
 
-*TBD* add tables X, Y, Z to github
+![Table X](https://github.com/aa2291/visual-surveillance-brief/blob/adding-appendix-content-to-readme/readme%20images/table%20x.png)
 
 Source: Microsoft Academic Graph; CSET analysis. Results generated December 18, 2020.
+</details>
+
+
 
 It appears that these tasks are quite granular compared to computer vision as a whole. Even the most popular task, object detection, appeared in less than 4% of computer vision papers. Most of these common computer vision tasks are general purpose, with relevance to a very wide range of computer vision applications. These tasks include object detection, image classification, denoising, image retrieval, object recognition, semantic segmentation, and super-resolution. Meanwhile, face recognition, pose estimation, and action recognition are more domain-specific. Of these three more applied tasks, face recognition and action recognition can be used in visual surveillance applications. 
 
 We also looked for tasks which attracted unusually high interest in the United States compared to China, and vice-versa. Since China publishes more computer vision papers than the U.S., we looked for tasks which made up a higher percentage of U.S. than Chinese computer vision papers, and vice-versa. As with the list of most common tasks, we found a large number of general-purpose tasks, as well as a few domain-specific tasks. Several of these domain-specific tasks— “activity recognition” for the U.S. and “face recognition” and “person re-identification” for China— were relevant to visual surveillance. The tasks more popular in China also included “visual tracking” and “object tracking”, or the tracking of objects in video feeds. While less specific to surveilling humans, these tasks can be used in visual surveillance systems.
 
 
+<details> <summary> Table Y: Computer vision tasks that get disproportionate research focus from the US relative to China include activity recognition </summary>
 
-[Table Y: Computer vision tasks that get disproportionate research focus from the US relative to China include activity recognition]
-
-
-
-Source: Microsoft Academic Graph; CSET analysis. Results generated December 18, 2020.
-
-
-
-
-[Table Z: Computer vision tasks that get disproportionate research focus from China include face recognition and person re-identification]
-
-
-
+![Table Y](https://github.com/aa2291/visual-surveillance-brief/blob/adding-appendix-content-to-readme/readme%20images/table%20y.png)
 
 Source: Microsoft Academic Graph; CSET analysis. Results generated December 18, 2020.
+</details>
 
+
+<details> <summary> Table Z: Computer vision tasks that get disproportionate research focus from China include face recognition and person re-identification </summary>
+![Table Z](https://github.com/aa2291/visual-surveillance-brief/blob/adding-appendix-content-to-readme/readme%20images/table%20z.png)
+
+Source: Microsoft Academic Graph; CSET analysis. Results generated December 18, 2020.
+</details>
 
 
 ## Identifying papers with surveillance tasks
