@@ -36,6 +36,7 @@ Source: Microsoft Academic Graph; CSET analysis. Results generated December 18, 
 
 
 <details> <summary> Table Z: Computer vision tasks that get disproportionate research focus from China include face recognition and person re-identification </summary>
+   
 ![Table Z](https://github.com/aa2291/visual-surveillance-brief/blob/adding-appendix-content-to-readme/readme%20images/table%20z.png)
 
 Source: Microsoft Academic Graph; CSET analysis. Results generated December 18, 2020.
