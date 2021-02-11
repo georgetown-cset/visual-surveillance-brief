@@ -8,7 +8,7 @@ This is a repo for the visual surveillance data brief written by Max L, Ashwin A
 * We took a source set of computer vision papers published between 2015 and 2019 *TBD - confirm this* from the Microsoft Academic Graph database.
     * We identified these papers as computer vision using CSET’s ArXiv-trained AI paper classifier, requiring an estimated probability of >X% computer vision *TBD*. For more information on this classifier, see https://arxiv.org/abs/2002.07143  
 * We used the tasks and methods tagging system described in https://github.com/georgetown-cset/task-and-method-annotation to extract a list of tasks for these computer vision articles. 
-    * For more information on this process, see the upcoming Technical Supplement. *TBD*
+    * For more information on this process, see the upcoming Technical Supplement on our task-tagging process.
 
 ## Analytic decision-making: Finding tasks of interest within computer vision (Python)
 We found that computer vision research was distributed over a wide range of tasks. Table X reports the top 10 most popular computer vision tasks worldwide from 2015-19, and the proportion of computer vision papers tagged with each task.
