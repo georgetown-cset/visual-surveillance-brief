@@ -15,7 +15,7 @@ We found that computer vision research was distributed over a wide range of task
 
 <details> <summary> Table X: Face recognition and action recognition are among the most popular computer vision tasks </summary>
 
-![Table X](https://github.com/aa2291/visual-surveillance-brief/blob/adding-appendix-content-to-readme/readme%20images/table%20x.png)
+![Table X](https://github.com/aa2291/visual-surveillance-brief/blob/main/readme%20images/table%20x.png)
 
 Source: Microsoft Academic Graph; CSET analysis. Results generated December 18, 2020.
 </details>
@@ -29,7 +29,7 @@ We also looked for tasks which attracted unusually high interest in the United S
 
 <details> <summary> Table Y: Computer vision tasks that get disproportionate research focus from the US relative to China include activity recognition </summary>
 
-![Table Y](https://github.com/aa2291/visual-surveillance-brief/blob/adding-appendix-content-to-readme/readme%20images/table%20y.png)
+![Table Y](https://github.com/aa2291/visual-surveillance-brief/blob/main/readme%20images/table%20y.png)
 
 Source: Microsoft Academic Graph; CSET analysis. Results generated December 18, 2020.
 </details>
@@ -37,7 +37,7 @@ Source: Microsoft Academic Graph; CSET analysis. Results generated December 18, 
 
 <details> <summary> Table Z: Computer vision tasks that get disproportionate research focus from China include face recognition and person re-identification </summary>
    
-![Table Z](https://github.com/aa2291/visual-surveillance-brief/blob/adding-appendix-content-to-readme/readme%20images/table%20z.png)
+![Table Z](https://github.com/aa2291/visual-surveillance-brief/blob/main/readme%20images/table%20z.png)
 
 Source: Microsoft Academic Graph; CSET analysis. Results generated December 18, 2020.
 </details>
