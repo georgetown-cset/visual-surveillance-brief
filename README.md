@@ -1,6 +1,9 @@
 # The project
 This is a repo for the visual surveillance data brief written by Max L, Ashwin A, and James D in late 2020 for publication early 2021.
 
+# Our process
+
+
 ## Data processing: Extracting tasks from computer vision papers (Python)
 * We took a source set of computer vision papers published between 2015 and 2019 *TBD - confirm this* from the Microsoft Academic Graph database.
     * We identified these papers as computer vision using CSET’s ArXiv-trained AI paper classifier, requiring an estimated probability of >X% computer vision *TBD*. For more information on this classifier, see https://arxiv.org/abs/2002.07143  
