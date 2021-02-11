@@ -102,6 +102,7 @@ In addition, our combined corpus (which combines data from Dimensions, Microsoft
     * This lets us calculate the growth rate of computer vision research
     * We took the ratio of surveillance country-year publication counts to computer vision country-year counts to calculate countries' focus on surveillance research over time
 
+---
 
 [1] For more information on research clusters, see Klavans, Richard, Kevin W. Boyack, and Dewey A. Murdick. "A novel approach to predicting exceptional growth in research." PLOS ONE 15, no. 9 (2020): e0239177.
 
