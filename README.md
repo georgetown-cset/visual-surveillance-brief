@@ -88,11 +88,11 @@ Our process may undercount visual surveillance research from countries with smal
 
 In addition, our combined corpus (which combines data from Dimensions, Microsoft Academic Graph, Web of Science, and the Chinese National Knowledge Infrastructure) is likely to capture well-known research from countries that are integrated with the international research community, as well as Chinese research via CNKI. It may be more likely to exclude research from countries with small, little-known, or secretive research communities. 
 
-## Google Sheets surveillance analysis
+## Data processing: Google Sheets surveillance analysis
 * We then analyzed the country-year stats in Google Sheets. https://docs.google.com/spreadsheets/d/1208sb0o4eD8lY98pPUNn33_3dwFkBqg-1qZL9cZyBJQ/edit#gid=663614057
 * We created pivot tables to analyze the country-level surveillance results, looking at tasks over time, countries over time, and countries by task.
 
-## Calculating total computer vision numbers, and comparing with surveillance
+## Data processing: Calculating total computer vision numbers, and comparing with surveillance
 * We identified computer vision papers in CSET’s combined corpus using the classifier trained on ArXiv preprints. The resulting corpus included about 310,000 papers published between 2015-2019 which were identified as computer vision. Of these, 262,762 had at least one associated author affiliation country. For this report we restricted our analysis to the latter set of papers.
 
 * We used the same country-attribution methods described above to calculate the number of overall computer vision papers per country by year.
