@@ -42,6 +42,11 @@ Source: Microsoft Academic Graph; CSET analysis. Results generated December 18, 
 Source: Microsoft Academic Graph; CSET analysis. Results generated December 18, 2020.
 </details>
 
+### Note: using only Microsoft Academic Graph for seed papers did not substantially affect our results
+For practical reasons, we based our analysis in the brief on computer vision papers from the Microsoft Academic Graph dataset only. However, when we attempted to replicate our results using computer vision papers in CSET's combined corpus, the results were highly similar. Using the same filters on research clusters (>=30 papers tagged with a task, of which >=50% were tagged with surveillance tasks), we generated a list of 49 clusters, of which 43 overlapped with the 51 clusters used in the brief (roughly 86% accuracy). These overlapping clusters tended to contain more papers, such that 92% of papers in the two sets of clusters overlapped. 
+
+Investigating the differences by hand, we found that one of the added clusters was about crowdfunding rather than crowd analysis. Excluding this large cluster, we found that 98% of the papers identified in the replication attempt were also found through the methods in our brief (98% recall). The analysis in our brief also contained some papers not present in the replication attempt, so only 92% of the papers analyzed in the brief were ones identified in the replication attempt (92% precision). When we evaluated the results from the replication attempt, we found that the size of task areas, their distribution across countries, and the changes in surveillance research over time looked almost identical to the results from the brief. The main difference was just that most task areas were about 10% smaller in the replication. This demonstrates that the extra papers included in the brief were not biased towards any one country or task area.
+
 
 ## Identifying papers with surveillance tasks
 ### Analytic decision-making: identifying families of surveillance-relevant tasks
