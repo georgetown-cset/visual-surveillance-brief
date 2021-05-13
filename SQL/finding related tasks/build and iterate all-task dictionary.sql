@@ -46,6 +46,12 @@ VALUES
   ("facial expression recognition", "emotion recognition", 3),
   ("person re-identification", "person detection", 3);
   
+INSERT INTO surveillance_tasks_brief.task_parent_pairs (parent_task, raw_task, round)
+VALUES 
+  ("action recognition", "activity recognition", 4),  
+  ("crowd counting", "crowded scenes", 4),  
+  ("crowd counting", "people tracking", 4);  
+
   
   
   
