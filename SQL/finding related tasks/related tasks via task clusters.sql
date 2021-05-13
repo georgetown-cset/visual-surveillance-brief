@@ -4,8 +4,7 @@
 -- e.g.: "action recognition" is one of our six base_tasks; "human acitivty recognition" might be a raw task under "action recognition" 
 WITH task_family_pairs AS(
 SELECT DISTINCT parent_task as task_family, raw_task 
-from surveillance_tasks_brief.task_parent_pairs_alt
-WHERE round = 1
+from surveillance_tasks_brief.task_parent_pairs_alltask
 ),
 
 --filter to CV papers from 2015-19, with at least one country associated with them
