@@ -23,16 +23,17 @@ FROM cv_task_recent_count
 ORDER BY n_2019 DESC),
 
 largest_tasks AS(
-SELECT *, "top 50 largest tasks" as category
+SELECT *, "top largest tasks" as category
 from summary_table
-ORDER BY n_2019
-LIMIT 50),
+ORDER BY n_2019 DESC
+LIMIT 100),
 
 fastest_growing_tasks AS(
-SELECT *, "top 50 fastest-growing tasks" as category 
+SELECT *, "top fastest-growing tasks" as category 
 from summary_table
-ORDER BY growth_rate
-LIMIT 50)
+WHERE n_2018 >= 10 --filter out very small tasks which may look fast-growing due to noise
+ORDER BY growth_rate DESC
+LIMIT 100)
 
 SELECT * from largest_tasks
 UNION ALL
