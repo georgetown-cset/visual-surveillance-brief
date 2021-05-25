@@ -1,7 +1,9 @@
+--unpack surveillance tasks
 WITH task_family_pairs AS(
 SELECT DISTINCT parent_task as task_family, raw_task 
 from surveillance_tasks_brief.task_parent_pairs),
 
+--filter for recent computer vision papers with a tagged country
 recent_cv_papers AS(
 SELECT distinct cset_id as merged_id, meta.year as year 
 from article_classification.predictions preds
@@ -12,7 +14,7 @@ AND country IS NOT NULL
 AND meta.year >= 2015 AND meta.year <=2019
 ),
 
---get recent computer vision papers that contain surveillance tasks
+--filter for papers that contain at least one surveillance task
 task_papers AS(
 SELECT merged_id, raw_task, task_family as base_task, year
 FROM tasks_and_methods.tasks task_data
@@ -21,6 +23,7 @@ INNER JOIN recent_cv_papers USING(merged_id)
 INNER JOIN task_family_pairs ON(span = task_family_pairs.raw_task)
 )
 
+--count surveillance papers by task and year
 SELECT year, base_task, COUNT(DISTINCT merged_id) as task_papers
 FROM task_papers
 GROUP BY year, base_task
