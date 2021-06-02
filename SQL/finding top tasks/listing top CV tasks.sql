@@ -2,7 +2,7 @@ WITH cv_papers as(
 SELECT distinct cset_id as merged_id, year 
 from article_classification.predictions preds
 INNER JOIN gcp_cset_links_v2.paper_affiliations_merged affs ON(preds.cset_id = affs.merged_id)
-WHERE cv = TRUE
+WHERE cv_filtered = TRUE
 AND country IS NOT NULL
 ),
 
