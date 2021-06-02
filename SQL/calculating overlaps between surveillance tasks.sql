@@ -7,7 +7,7 @@ SELECT distinct cset_id as merged_id, meta.year as year
 from article_classification.predictions preds
 INNER JOIN gcp_cset_links_v2.paper_affiliations_merged affs ON(preds.cset_id = affs.merged_id)
 INNER JOIN gcp_cset_links_v2.article_merged_meta meta USING(merged_id)
-WHERE cv = TRUE
+WHERE cv_filtered = TRUE
 AND country IS NOT NULL
 AND meta.year >= 2015 AND meta.year <=2019
 ),
