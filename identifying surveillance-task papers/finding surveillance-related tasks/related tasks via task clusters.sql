@@ -3,8 +3,8 @@
 -- raw_task = a string associated with that general task
 -- e.g.: "action recognition" is one of our six base_tasks; "human activity recognition" might be a raw task under "action recognition"
 WITH task_term_pairs AS (
-    SELECT DISTINCT parent_task as base_task, raw_task
-    from surveillance_tasks_brief.task_parent_pairs_alltask
+    SELECT DISTINCT base_task, raw_task
+    from surveillance_tasks_brief.task_term_pairs
 ),
 
 --filter to CV papers from 2015-19, with at least one country associated with them
