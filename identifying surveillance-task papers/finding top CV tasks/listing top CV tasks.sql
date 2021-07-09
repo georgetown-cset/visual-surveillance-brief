@@ -3,7 +3,7 @@ WITH cv_papers as (
 from article_classification.predictions preds
     INNER JOIN gcp_cset_links_v2.paper_affiliations_merged affs
 ON(preds.cset_id = affs.merged_id)
-WHERE cv = TRUE
+WHERE cv_filtered = TRUE
   AND country IS NOT NULL
     )
     , cv_task_recent_count as (
