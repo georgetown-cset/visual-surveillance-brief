@@ -2,7 +2,7 @@
 -- base_task = umbrella term for the task
 -- raw_task = a string associated with that general task
 -- e.g.: "action recognition" is one of our six base_tasks; "human activity recognition" might be a raw task under "action recognition"
-WITH task_family_pairs AS (
+WITH task_term_pairs AS (
     SELECT DISTINCT parent_task as base_task, raw_task
     from surveillance_tasks_brief.task_parent_pairs_alltask
 ),
@@ -26,8 +26,8 @@ SELECT merged_id, raw_task, base_task
 FROM tasks_and_methods.tasks task_data
     CROSS JOIN UNNEST(spans) as span
     INNER JOIN recent_cv_papers USING (merged_id)
-    INNER JOIN task_family_pairs
-ON(span = task_family_pairs.raw_task)
+    INNER JOIN task_term_pairs
+ON(span = task_term_pairs.raw_task)
     ),
 
 --count number of papers with each base task
@@ -50,8 +50,8 @@ FROM tasks_and_methods.task_clusters
     base_task_clusters AS (
 SELECT DISTINCT merged_id, cluster_name, base_task
 FROM base_task_paper_clusters
-    INNER JOIN task_family_pairs
-ON(task_family_pairs.raw_task = base_task_paper_clusters.task)
+    INNER JOIN task_term_pairs
+ON(task_term_pairs.raw_task = base_task_paper_clusters.task)
     ),
 
 --list all tasks that share at least one cluster with a base task, and count the number of overlapping papers for each (overlap_task, base_task) pair
@@ -86,5 +86,5 @@ from top_overlapping_tasks
 WHERE overlap_given_other >= .05                                            --filter for tasks that are fairly relevant
   AND (n_other - n_overlap) >= .05 * n_base                                 --filter out tasks that don't add many more papers
   AND overlap_given_other < 1                                               --filter out sub-tasks
-  AND overlap_task NOT IN (SELECT DISTINCT raw_task FROM task_family_pairs) --filter out our search terms
+  AND overlap_task NOT IN (SELECT DISTINCT raw_task FROM task_term_pairs) --filter out our search terms
 ORDER BY base_task ASC, n_other DESC
