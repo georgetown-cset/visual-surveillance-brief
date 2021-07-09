@@ -1,7 +1,7 @@
-WITH task_family_pairs AS (
-    SELECT DISTINCT parent_task AS task_family,
+WITH task_term_pairs AS (
+    SELECT DISTINCT base_task,
                     raw_task
-    FROM surveillance_tasks_brief.task_parent_pairs
+    FROM surveillance_tasks_brief.task_term_pairs
 ),
 
      recent_cv_papers AS (
@@ -21,9 +21,9 @@ WHERE
 --get recent computer vision papers that contain surveillance tasks
     task_papers AS (
 SELECT
-    merged_id, raw_task, task_family AS base_task, YEAR
-FROM tasks_and_methods.tasks task_data CROSS JOIN UNNEST(spans) AS span INNER JOIN recent_cv_papers USING (merged_id) INNER JOIN task_family_pairs
-ON(span = task_family_pairs.raw_task) ),
+    merged_id, raw_task, base_task, YEAR
+FROM tasks_and_methods.tasks task_data CROSS JOIN UNNEST(spans) AS span INNER JOIN recent_cv_papers USING (merged_id) INNER JOIN task_term_pairs
+ON(span = task_term_pairs.raw_task) ),
 
     --get all papers with at least one surveillance task
     surv_papers AS (
