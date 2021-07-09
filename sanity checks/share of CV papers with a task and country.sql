@@ -5,14 +5,14 @@ WITH cv_papers_w_country AS (
     FROM article_classification.predictions preds
              INNER JOIN gcp_cset_links_v2.paper_affiliations_merged aff ON (preds.cset_id = aff.merged_id)
     WHERE country IS NOT NULL
-      AND cv = TRUE
+      AND cv_filtered = TRUE
 ),
 
 --1b. find all computer vision papers without an affiliated country
      cv_papers_no_country AS (
          SELECT DISTINCT cset_id as merged_id
          FROM article_classification.predictions preds
-         WHERE cv = TRUE
+         WHERE cv_filtered = TRUE
            AND cset_id NOT IN (SELECT merged_id as cset_id FROM cv_papers_w_country)
      ),
 
