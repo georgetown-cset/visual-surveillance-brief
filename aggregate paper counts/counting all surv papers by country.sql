@@ -49,8 +49,8 @@ GROUP BY
     country, YEAR ),
 
 
-    --tag countries by membership in one of several groups
-    --note: the groups do not overlap. they also don't cover the full set of countries.
+--tag countries by membership in one of several groups
+--note: the groups do not overlap. Countries not included in a specific group are tagged with the "Other" group.
     country_groups AS (
 SELECT
     DISTINCT (country), 
@@ -63,7 +63,8 @@ SELECT
          WHEN country IN ("United States") THEN "United States" 
          WHEN country IN ("India") THEN "India" 
          ELSE "Other" END) AS country_group
-FROM `gcp_cset_links_v2.affiliations_merged` )
+FROM `gcp_cset_links_v2.paper_affiliations_merged` )
+
 
 SELECT
     YEAR, country, NP, NP_norm, country_group
