@@ -53,17 +53,16 @@ GROUP BY
     --note: the groups do not overlap. they also don't cover the full set of countries.
     country_groups AS (
 SELECT
-    DISTINCT (
-    country), (
-    CASE WHEN country IN (
-    "Austria", "Italy", "Belgium", "Latvia", "Bulgaria", "Lithuania", "Croatia", "Luxembourg", "Cyprus", "Malta", "Czechia", "Netherlands", "Denmark", "Poland", "Estonia", "Portugal", "Finland", "Romania", "France", "Slovakia", "Germany", "Slovenia", "Greece", "Spain", "Hungary", "Sweden", "Ireland") THEN "EU" WHEN country IN (
-    "United Kingdom", "Canada", "Australia", "New Zealand") THEN "CANZUK" WHEN country IN (
-    "Japan", "Korea", "Taiwan") THEN "East Asian democracy" WHEN country IN (
-    "Malaysia", "Thailand", "Singapore", "Vietnam", "Indonesia", "Philippines", "Myanmar", "Cambodia", "Laos", "Brunei") THEN "SE Asia" WHEN country IN (
-    "Egypt", "Saudi Arabia", "Turkey", "Iran", "Iraq", "Israel", "Yemen", "Oman", "Syria", "Jordan", "Lebanon", "Kuwait", "Qatar", "United Arab Emirates", "Pakistan") THEN "Middle East" WHEN country IN (
-    "China") THEN "China" WHEN country IN (
-    "United States") THEN "United States" WHEN country IN (
-    "India") THEN "India" ELSE "Other" END) AS country_group
+    DISTINCT (country), 
+        (CASE WHEN country IN ("Austria", "Italy", "Belgium", "Latvia", "Bulgaria", "Lithuania", "Croatia", "Luxembourg", "Cyprus", "Malta", "Czechia", "Netherlands", "Denmark", "Poland", "Estonia", "Portugal", "Finland", "Romania", "France", "Slovakia", "Germany", "Slovenia", "Greece", "Spain", "Hungary", "Sweden", "Ireland") THEN "EU" 
+         WHEN country IN ("United Kingdom", "Canada", "Australia", "New Zealand") THEN "CANZUK" 
+         WHEN country IN ("Japan", "Korea", "Taiwan") THEN "East Asian democracy" 
+         WHEN country IN ("Malaysia", "Thailand", "Singapore", "Vietnam", "Indonesia", "Philippines", "Myanmar", "Cambodia", "Laos", "Brunei") THEN "SE Asia" 
+         WHEN country IN ("Egypt", "Saudi Arabia", "Turkey", "Iran", "Iraq", "Israel", "Yemen", "Oman", "Syria", "Jordan", "Lebanon", "Kuwait", "Qatar", "United Arab Emirates", "Pakistan") THEN "Middle East" 
+         WHEN country IN ("China") THEN "China" 
+         WHEN country IN ("United States") THEN "United States" 
+         WHEN country IN ("India") THEN "India" 
+         ELSE "Other" END) AS country_group
 FROM `gcp_cset_links_v2.affiliations_merged` )
 
 SELECT
