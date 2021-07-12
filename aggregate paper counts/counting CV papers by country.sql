@@ -59,6 +59,7 @@ SELECT
          WHEN country IN ("India") THEN "India" 
          ELSE "Other" END) AS country_group
 FROM `gcp_cset_links_v2.paper_affiliations_merged` )
+
 --present paper counts by country, year, and task. We tag each country with its group so that we can aggregate country-group level stats in the resulting Google Sheet. 
 SELECT year, country, "CV" as category, NP, NP_norm, country_group
 FROM country_year_counts
