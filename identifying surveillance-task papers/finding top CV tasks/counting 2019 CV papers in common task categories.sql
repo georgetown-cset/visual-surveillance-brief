@@ -13,7 +13,7 @@ WHERE cv_filtered = TRUE
   AND meta.year = 2019
     ),
 
---tag papers with a common task category ("general", "surveillance", "medical", etc.) if it contains at least one relevant term
+--tag papers with a common task category ("general", "surveillance", "medical", etc.) if they are tagged with at least one relevant task term
 -- -- terms are taken from the top 100 terms, so we are missing some alternative phrasings, e.g. "fer" for facial expression recognition
     CV_paper_tasks AS (
 SELECT merged_id,
