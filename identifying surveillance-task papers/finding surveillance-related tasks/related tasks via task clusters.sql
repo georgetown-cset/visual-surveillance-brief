@@ -88,3 +88,6 @@ WHERE overlap_given_other >= .05                                            --fi
   AND overlap_given_other < 1                                               --filter out sub-tasks
   AND overlap_task NOT IN (SELECT DISTINCT raw_task FROM task_term_pairs) --filter out our search terms
 ORDER BY base_task ASC, n_other DESC
+
+--note: to check that we're not filtering out smaller relevant terms, we experimented with other filters
+-- such as lowering our filter on (n_other - n_overlap) to .025 *n_base. However, we didn't find new relevant tasks
