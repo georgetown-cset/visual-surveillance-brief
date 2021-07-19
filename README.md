@@ -72,7 +72,7 @@ Relevant directory: aggregate paper counts
   * query: recent CV papers with a task and country.sql
 
 **Note:** we filter for papers in our merged corpus which have both an associated country and task. When we run a sanity check, we find that these comprise a large share of all computer vision papers. 
-  * query: share of CV papers with a task and country.sql, the sanity checks directory. 
+  * query: share of CV papers with a task and country.sql, in the sanity checks directory. 
 
 * Counting annual surveillance papers
   * query: counting all surveillance papers.sql
