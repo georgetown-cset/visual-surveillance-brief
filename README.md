@@ -72,15 +72,15 @@ Relevant directory: aggregate paper counts
   * query: recent CV papers with a task and country.sql
 
 **Note:** we filter for papers in our merged corpus which have both an associated country and task. When we run a sanity check, we find that these comprise a large share of all computer vision papers. 
-  * query: share of CV papers with a task and country.sql, in the sanity checks directory. 
+  * query: sanity checks / share of CV papers with a task and country.sql 
 
 * Counting annual surveillance papers
-  * query: counting all surveillance papers.sql
+  * query: aggregate paper counts / counting all surveillance papers.sql
 * Counting annual surveillance papers by task
-  * query: counting surveillance papers by task.sql    
+  * query: aggregate paper counts/ counting surveillance papers by task.sql    
 
 **Note:** where a paper has multiple surveillance tasks, such as face recognition and action recognition, we count it as a single surveillance paper in our surveillance task count. But in our task-specific statistics, we would count it as both a face recognition paper and an action recognition paper. However, such papers are relatively rare: only 2.5% of surveillance papers we found were associated with more than one surveillance task.
-  * These results are found via the query overlaps between surveillance tasks.sql, in the sanity checks directory. 
+  * These results are found via the query sanity checks / overlaps between surveillance tasks.sql . 
 
 **Figures:** These results lets us evaluate surveillance as a share of CV research over time (Figure 1). They also let us compare the size and growth rate of surveillance tasks and computer vision (Table 4 and Figure 4).
 
