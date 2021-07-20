@@ -44,6 +44,8 @@ Subdirectory: identifying surveillance-task papers/finding surveillance-related 
 
 Relevant Google sheet: [Identifying related tasks](https://docs.google.com/spreadsheets/d/1TaCwxX-r0GzMyP2rmDfJ4uBEjqCA6F8nGzr_Cps_5lA/edit#gid=1623457572) 
 
+We want to find terms related to the six surveillance tasks we identified as frequent and/or fast-growing: face recognition, action recognition, crowd analysis, facial expression recognition, face anti-spoofing, and person re-identification. To do so, we identify terms that occur in the same papers and are identified by the SciREX classifier as referring to the same task. (For each paper, the SciREX classifier groups together terms that seem to refer to the same task as part of a "task cluster": we count how often terms overlap within task clusters in recent computer vision papers.)
+
 * Insert the common surveillance task terms we found above into the table surveillance_tasks_brief.task_term_pairs
   * query: identifying surveillance-task papers/finding surveillance-related tasks/ build and iterate all-task dictionary.sql, round = 1  
 * Identify terms that commonly overlap with the tasks in this table
