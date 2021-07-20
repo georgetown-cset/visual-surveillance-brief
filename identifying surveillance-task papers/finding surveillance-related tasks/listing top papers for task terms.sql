@@ -1,5 +1,5 @@
 WITH task_term_pairs AS(
-SELECT DISTINCT parent_task as base_task, raw_task 
+SELECT DISTINCT base_task, raw_task 
 from surveillance_tasks_brief.task_term_pairs
 ),
 
