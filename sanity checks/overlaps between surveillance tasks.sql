@@ -3,7 +3,7 @@ WITH task_term_pairs AS (
     from surveillance_tasks_brief.task_term_pairs),
 
      recent_cv_papers AS (
-         SELECT distinct cset_id as merged_id, meta.year as year
+    SELECT distinct cset_id as merged_id, meta.year as year
 from article_classification.predictions preds
     INNER JOIN gcp_cset_links_v2.paper_affiliations_merged affs
 ON(preds.cset_id = affs.merged_id)
@@ -44,7 +44,7 @@ GROUP BY base_task),
 --count all overlaps
 all_overlaps AS (
 SELECT COUNT(DISTINCT merged_id) as NP,
-    SUM (CASE WHEN n_tasks >=2 THEN 1 ELSE 0 END) as multiple_task_papers
+    COUNT (DISTINCT CASE WHEN n_tasks >=2 THEN merged_id ELSE NULL END) as multiple_task_papers
 FROM task_overlaps),
 
 --count all papers for each task
