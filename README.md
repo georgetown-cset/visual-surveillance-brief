@@ -110,6 +110,7 @@ Relevant Google Sheet:  [Generating aggregate counts - key figures and tables](h
 We count the number of Chinese and world papers on all topics, AI, computer vision, and surveillance. This lets us identify whether China's large share of surveillance research is due to large research output overall, or a particular concentration in AI, computer vision, or surveillance.
 
 * We use SciBERT to identify AI papers, and count unique papers in CSET’s merged corpus for overall research.
+ * note: we identify AI papers via the SciBERT classifier, accepting any paper that's flagged as AI, computer vision, robotics, or natural language processing. Our results may differ somewhat from other analyses which use just the SciBERT AI classifier. 
   * comparing paper growth across surv, CV, AI, all research/ counting all research by country.sql
   * comparing paper growth across surv, CV, AI, all research/ counting all AI papers by country.sql
 * We also make use of some queries mentioned in the above section
