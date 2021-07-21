@@ -39,8 +39,11 @@ FROM task_papers
     INNER JOIN task_overlaps USING (merged_id)
 WHERE n_tasks >= 2
 GROUP BY base_task),
-    all_overlaps AS (
-SELECT SUM (1) as NP,
+
+
+--count all overlaps
+all_overlaps AS (
+SELECT COUNT(DISTINCT merged_id) as NP,
     SUM (CASE WHEN n_tasks >=2 THEN 1 ELSE 0 END) as multiple_task_papers
 FROM task_overlaps),
 
