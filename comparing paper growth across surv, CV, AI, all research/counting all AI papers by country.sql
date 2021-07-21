@@ -1,3 +1,8 @@
+--count annual AI papers per country
+-- note: we identify AI papers via the SciBERT classifier, accepting any paper that's flagged as AI, computer vision, robotics, or natural language processing
+-- this may differ from other analyses which use just the SciBERT classifier 
+
+--identify all recent AI papers
 WITH recent_ai_papers AS (
     SELECT distinct cset_id as merged_id, meta.year as year
 from article_classification.predictions preds
