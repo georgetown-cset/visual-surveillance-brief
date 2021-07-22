@@ -12,6 +12,9 @@ All data for the other tables and figures in the project comes from the sheet [G
 
 This document lines up the figure images from the draft with the Google Sheets they correspond to: [Surveillance Tasks  brief - figures with links to source data](https://docs.google.com/document/d/1TXMFZ7WnAf03hK55v6lTrwFwCfBCN2UeVscr4DF1X10/)
 
+## Note for replications
+We copied the BigQuery tables referenced in this project to the surveillance_tasks_brief dataset; the relevant BigQuery console commands are shown in the "copying tables via BQ console" file. Referencing the tables in this dataset (e.g. surveillance_tasks_brief.predictions instead of article_classifications.predictions) should replicate the results of our brief. 
+
 
 ## Full methods writeup
 [Surveillance tasks - methodology writeup](https://docs.google.com/document/d/1bcNGRmPJWSajLjtkeZABwBRyKiMWNHfcwim8CFdAN7I/edit#).
