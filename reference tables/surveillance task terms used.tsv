@@ -1,0 +1,7 @@
+task	terms
+action recognition	action classification, action recognition, activity recognition, har, human action recognition, human activity recognition
+crowd counting	counting people, crowd analysis, crowd behavior analysis, crowd behavior recognition, crowd count, crowd counting, crowd density, crowd density estimation, crowd scene understanding, crowded scenes, people counting, people tracking
+face anti-spoofing	face anti-spoofing, face antispoofing, face liveness detection, face presentation attack detection, face presentation attacks, face spoofing, face spoofing attacks, face spoofing detection
+face recognition	face detection, face recognition, facial recognition
+facial expression recognition	emotion recognition, expression recognition, facial emotion recognition, facial expression analysis, facial expression recognition, fer
+person re-identification	person detection, person re-identification, person reidentification, re-id, reid
