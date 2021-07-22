@@ -1,5 +1,3 @@
-
-
 bq --project_id=gcp-cset-projects cp -n 
 article_classification.predictions surveillance_tasks_brief.predictions 
 
