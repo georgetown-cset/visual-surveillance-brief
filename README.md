@@ -32,7 +32,7 @@ Identifying English-language computer vision papers using the SciBERT classifier
 **Computing aggregate statistics for computer vision and surveillance**
 * Counting computer vision and surveillance papers by year. 
 * Counting annual papers by country
-  * We associate papers with their authors’ countries of origin and generating country-level counts of paper output.
+  * We associate papers with their authors’ countries of origin and generate country-level counts of paper output.
   * Note: we divide papers up evenly among their countries of origin: a paper with authors from one institution in the United States and three institutions in the United Kingdom would get counted as one-half of a U.S. paper and one-half of a U.K. paper. We chose to do this because our database of institutions is often redundant, counting “Oxford University” and “University of Oxford” as separate entities associated with a paper. 
  
 * Calculating various aggregate statistics based on query results. These statistics make up most of the figures we report in the brief, such as each country’s share of surveillance tasks in 2019.
