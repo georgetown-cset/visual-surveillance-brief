@@ -24,6 +24,7 @@ We copied the BigQuery tables referenced in this project to the surveillance_tas
 Our process involves the following steps:
 
 **Identifying relevant papers**
+
 Identifying English-language computer vision papers using the SciBERT classifier, and tagging these computer vision papers with tasks based on their abstracts, using the SciREX classifier.
   * Finding common and fast-growing computer vision tasks, and choosing to focus on six common or fast-growing surveillance tasks.
   * Finding the task terms related to our chosen task areas. Starting from an initial list of terms that refer to these tasks, we identify related terms. This leaves us with a final list of terms that refer to surveillance tasks.
@@ -37,6 +38,7 @@ Identifying English-language computer vision papers using the SciBERT classifier
 * Calculating various aggregate statistics based on query results. These statistics make up most of the figures we report in the brief, such as each country’s share of surveillance tasks in 2019.
 
 **Counting Chinese and world output in AI and overall research**
+
 We use the SciBERT classifier to identify AI papers, and count unique papers in CSET’s merged corpus to identify overall research output.
 These results let us identify whether China's high share of surveillance papers is due to high research output overall, or high concentration of its research output in AI or computer vision. We find that China's research growth rates are slightly larger than the world average, and its focus on computer vision is considerably stronger than the world average.
 
