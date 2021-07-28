@@ -16,17 +16,35 @@ This document lines up the figure images from the draft with the Google Sheets t
 We copied the BigQuery tables referenced in this project to the surveillance_tasks_brief dataset; the relevant BigQuery console commands are shown in the "copying tables via BQ console" file. Referencing the tables in this dataset (e.g. surveillance_tasks_brief.predictions instead of article_classifications.predictions) should replicate the results of our brief. 
 
 
-## Full methods writeup
+## Detailed methods writeup
 [Surveillance tasks - methodology writeup](https://docs.google.com/document/d/1bcNGRmPJWSajLjtkeZABwBRyKiMWNHfcwim8CFdAN7I/edit#).
 
 
 # Overview 
 Our process involves the following steps:
 
+**Identifying relevant papers**
+Identifying English-language computer vision papers using the SciBERT classifier, and tagging these computer vision papers with tasks based on their abstracts, using the SciREX classifier.
+  * Finding common and fast-growing computer vision tasks, and choosing to focus on six common or fast-growing surveillance tasks.
+  * Finding the task terms related to our chosen task areas. Starting from an initial list of terms that refer to these tasks, we identify related terms. This leaves us with a final list of terms that refer to surveillance tasks.
+
+**Computing aggregate statistics for computer vision and surveillance**
+* Counting computer vision and surveillance papers by year. 
+* Counting annual papers by country
+  * We associate papers with their authors’ countries of origin and generating country-level counts of paper output.
+  * Note: we divide papers up evenly among their countries of origin: a paper with authors from one institution in the United States and three institutions in the United Kingdom would get counted as one-half of a U.S. paper and one-half of a U.K. paper. We chose to do this because our database of institutions is often redundant, counting “Oxford University” and “University of Oxford” as separate entities associated with a paper. 
+ 
+* Calculating various aggregate statistics based on query results. These statistics make up most of the figures we report in the brief, such as each country’s share of surveillance tasks in 2019.
+
+**Counting Chinese and world output in AI and overall research**
+We use the SciBERT classifier to identify AI papers, and count unique papers in CSET’s merged corpus to identify overall research output.
+These results let us identify whether China's high share of surveillance papers is due to high research output overall, or high concentration of its research output in AI or computer vision. We find that China's research growth rates are slightly larger than the world average, and its focus on computer vision is considerably stronger than the world average.
+
+
 ## Identifying relevant papers
 directory: identifying surveillance-task papers
 
-### Finding top computer vision tasks
+### Finding common and fast-growing computer vision tasks
 Subdirectory: identifying surveillance-task papers/finding top CV tasks
 
 Relevant Google Sheet: [Top CV tasks - 2019 count and growth rate](https://docs.google.com/spreadsheets/d/1ME_fcszBZUgmMYaSZPc0SSsEtdDrs1GQBMuOW7DYC_I/edit#gid=922508543) 
