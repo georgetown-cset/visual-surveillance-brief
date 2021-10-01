@@ -29,7 +29,9 @@ ON(span = task_term_pairs.raw_task) ),
     surv_papers AS (
 SELECT
     DISTINCT merged_id, YEAR
-FROM task_papers), paper_country_counts AS (
+FROM task_papers), 
+
+paper_country_counts AS (
 SELECT
     merged_id, COUNT (
     DISTINCT country) AS n_countries
@@ -37,7 +39,9 @@ FROM surv_papers INNER JOIN gcp_cset_links_v2.paper_affiliations_merged USING (m
 WHERE
     country IS NOT NULL
 GROUP BY
-    merged_id ), country_task_counts AS (
+    merged_id ), 
+    
+country_task_counts AS (
 SELECT
     country, YEAR, COUNT (
     DISTINCT merged_id) AS NP, SUM (
