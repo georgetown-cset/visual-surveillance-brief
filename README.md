@@ -27,8 +27,6 @@ directory: identifying surveillance-task papers
 ### Finding common and fast-growing computer vision tasks
 Subdirectory: identifying surveillance-task papers/finding top CV tasks
 
-Relevant Google Sheet: [Top CV tasks - 2019 count and growth rate](https://docs.google.com/spreadsheets/d/1ME_fcszBZUgmMYaSZPc0SSsEtdDrs1GQBMuOW7DYC_I/edit#gid=922508543) 
-
 We identify English-language computer vision papers using the SciBERT classifier, and tag these computer vision papers with tasks based on their abstracts, using the SciREX classifier. 
 
 * Seeing the overall frequency distribution of CV tasks -- this lets us observe that, while we see many CV tasks overall, very few of them appear in more than 10-20 papers. 
@@ -42,8 +40,6 @@ We identify English-language computer vision papers using the SciBERT classifier
 
 ### Finding task terms related to our chosen task areas
 Subdirectory: identifying surveillance-task papers/finding surveillance-related tasks
-
-Relevant Google sheet: [Identifying related tasks](https://docs.google.com/spreadsheets/d/1TaCwxX-r0GzMyP2rmDfJ4uBEjqCA6F8nGzr_Cps_5lA/edit#gid=1623457572) 
 
 We want to find terms related to the six surveillance tasks we identified as frequent and/or fast-growing: face recognition, action recognition, crowd analysis, facial expression recognition, face anti-spoofing, and person re-identification. To do so, we identify terms that occur in the same papers and are identified by the SciREX classifier as referring to the same task. (For each paper, the SciREX classifier groups together terms that seem to refer to the same task as part of a "task cluster": we count how often terms overlap within task clusters in recent computer vision papers.)
 
@@ -62,12 +58,8 @@ Repeat the above process until we no longer see relevant new terms to add.
   * query: identifying surveillance-task papers/finding surveillance-related tasks/ surveillance-general tasks - find highly overlapping tasks.sql
 * Sanity check: see how heavily our results overlap with these "general surveillance" terms
   * query: identifying surveillance-task papers/finding surveillance-related tasks/ surveillance-general tasks - overlap with domain-specific surveillance.sql 
-   
-For more information on this process, see [the relevant section of the methodology writeup](https://docs.google.com/document/d/1bcNGRmPJWSajLjtkeZABwBRyKiMWNHfcwim8CFdAN7I/edit#heading=h.fswe7ptbiy5h).
-
 
 ## Computing aggregate statistics for computer vision and surveillance
-Relevant Google Sheet:  [Generating aggregate counts - key figures and tables](https://docs.google.com/spreadsheets/d/1Ls9Q5SM7ApX4pnssdFYw7WgktdS5DlF00H2HX16bhMU/edit)
 Relevant directory: aggregate paper counts
 
 ### Overall scale for CV and surveillance per year
@@ -106,7 +98,6 @@ We then associate papers with their authors’ countries of origin and generatin
 
 ## Counting Chinese and world output in AI and overall research
 directory:  comparing paper growth across surv, CV, AI, all research
-Relevant Google Sheet:  [Generating aggregate counts - key figures and tables](https://docs.google.com/spreadsheets/d/1Ls9Q5SM7ApX4pnssdFYw7WgktdS5DlF00H2HX16bhMU/edit)
 
 We count the number of Chinese and world papers on all topics, AI, computer vision, and surveillance. This lets us identify whether China's large share of surveillance research is due to large research output overall, or a particular concentration in AI, computer vision, or surveillance.
 
